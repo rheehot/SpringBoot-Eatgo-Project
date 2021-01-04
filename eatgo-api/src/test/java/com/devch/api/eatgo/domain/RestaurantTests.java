@@ -1,6 +1,5 @@
 package com.devch.api.eatgo.domain;
 
-import static net.bytebuddy.matcher.ElementMatchers.is;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
@@ -16,15 +15,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 class RestaurantTests {
 
   @Test
-  void creation() {
-    Restaurant restaurant = new Restaurant(" ", "Bab zip");
-    assertThat(restaurant.getName()).isEqualTo("Bab zip");
-    assertThat(restaurant.getAddress()).isEqualTo("Seoul");
+  void create() {
+    Restaurant restaurant = new Restaurant("bab zip", "");
+    assertThat(restaurant.getName()).isEqualTo("bab zip");
   }
 
   @Test
-  void information(){
-    Restaurant restaurant = new Restaurant("Seoul", "Bab zip");
-    assertThat(restaurant.getInformation()).isEqualTo("Bab zip in Seoul");
+  void information() {
+    Restaurant restaurant = new Restaurant("bab zip", "Seoul");
+    assertThat(restaurant.getInformation()).isEqualTo("bab zip in Seoul");
   }
 }

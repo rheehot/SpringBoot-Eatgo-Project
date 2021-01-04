@@ -9,10 +9,10 @@ package com.devch.api.eatgo.domain;
 public class Restaurant {
 
   private String name;
+
   private String address;
 
-
-  public Restaurant(String address, String name) {
+  public Restaurant(String name, String address) {
     this.name = name;
     this.address = address;
   }
@@ -20,7 +20,6 @@ public class Restaurant {
   public String getName() {
     return name;
   }
-
   public String getAddress() {
     return address;
   }
